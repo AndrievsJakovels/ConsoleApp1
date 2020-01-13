@@ -1,0 +1,52 @@
+﻿@model MoviesApp4.Models.CinemaModel
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>@(String.IsNullOrEmpty(Model.Name) ? "New Cinema" : Model.Name)</h2>
+
+@using (Html.BeginForm("Edit", "Cinema", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Adress, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(m => m.Adress, new { @class = "form-control" })
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            @Html.HiddenFor(m => m.Id)
+            <input type="submit" value="Sagblabāt" class="btn btn-default" />
+        </div>
+    </div>
+
+
+}
+@Html.ActionLink("Pievienot jaunu", "Edit", "Movie", new { CinemaId = Model.Id }, null)
+@if (Model.Id != 0)
+{
+    <table class=" table table-striped">
+        <tr>
+            <th>Nosaukums</th>
+            <th>Gads</th>
+
+        </tr>
+        @foreach (var movies in Model.Movies)
+        {
+            <tr>
+                <td>@movies.Name  </td>
+                <td>@movies.Year @Html.ActionLink("Dzēst", "Delete", "Movie", new { id = movies.Id }, new { @class = "btn btn-primary" })</td>
+                <td>@movies.Year @Html.ActionLink("Labot", "Edit", "Movie", new { id = movies.Id, cinemaId = Model.Id }, null)</td>
+
+            </tr>
+        }
+    </table>
+}

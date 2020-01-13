@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Bankas paraugs";
+}
+
+<br>
+<br>
+<div class="col-md-2"> </div>
+<div class="col-md-7">
+
+
+    <h2>Bankas paraugu maksājumi</h2>
+
+
+    <div class="progressBarContainer">
+        <div class="progress" style="  height:30px ;border: none;">
+            <div class="progress-bar progress-bar-success" style="width: 20%; color: white; background: #1be135; padding-top: 5px">
+                <p style=" font-size:15px"> 1 Parauga izvēle</p>
+            </div>
+            <div class="progress-bar progress-bar-success" style="width: 15%; color: black; padding-top: 5px; background: none">
+                <p style=" font-size:15px"> 2 Datu pārbaude</p>
+            </div>
+            <div class="progress-bar progress-bar-success" style="width: 18%; color: black; padding-top: 5px; background: none">
+                <p style=" font-size:15px"> 3 Apstiprināšana</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <form class=" col-md-3 form-inline">
+
+        <div class="form-group">
+
+
+
+
+
+            <a href="@Url.Action("Ūdens rēķins ", "BankSampleWater", "Payment")" class="btn btn-success">
+                Ūdens rēķins
+                <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+            </a>
+
+            <br>
+            <br>
+
+            <a href="@Url.Action("Ūdens rēķins ", "BankSampleElectricity", "Payment")" class="btn btn-success">
+                Elektrības rēķins
+                <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+            </a>
+            <br>
+            <br>
+
+            <a href="@Url.Action("Ūdens rēķins ", "BankSampleTelephone", "Payment")" class="btn btn-success">
+                Telefona rēķins
+                <span class="glyphicon glyphicon-tint" aria-hidden="true" ></span>
+            </a>
+
+
+
+        </div>
+
+
+
+
+    </form>
+
+
+
+
+
+
+</div>

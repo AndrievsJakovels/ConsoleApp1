@@ -1,0 +1,186 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js"></script>
+
+
+@model List<Ibanka.Models.Payments>
+@{
+
+    
+    ViewBag.Title = "Index";
+}
+
+< <br>
+<br>
+
+
+<div class="col-md-10">
+    <h2> Konta pārskats</h2>
+
+    <br>
+
+    <h4>Izvēlaties pārskata periodu un kontu</h4>
+
+    <div class="container4">
+        <div class='col-md-4'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker6'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-4'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker7'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+
+            <div class="col-sm-4">
+
+                <select class="form-control" id="inputPassword4">
+                    <option>Konts</option>
+
+                </select>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+    <br>
+    <br>
+    <form class="form-horizontal">
+
+        <div class="col-sm-11"></div>
+
+        <div class="form-group">
+
+            <button type="button" class="btn btn-primary">Pieprasīt</button>
+
+        </div>
+
+    </form>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputName" class="col-sm-3 control-label">Pieejamais atlikums</label>
+            <div class="col-sm-5">
+                <label for="inputName" class="col-sm-6 control-label style = " text-aligh: left"">Pieejamais atlikums</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputName" class="col-sm-3 control-label">Sākuma atlikums</label>
+            <div class="col-sm-5">
+                <label for="inputName" class="col-sm-6 control-label; style = " text-aligh: left">Sākuma atlikums</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputName" class="col-sm-3 control-label">Beigu atlikums</label>
+            <div class="col-sm-5">
+                <label for="inputName" class="col-sm-6 control-label; style = " text-aligh: left">Beigu atlikums</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputName" class="col-sm-3 control-label">Debeta apgrozījums</label>
+            <div class="col-sm-5">
+                <label for="inputName" class="col-sm-6 control-label; style = " text-aligh: left">Debeta apgrozījums</label>
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker6').datetimepicker();
+            $('#datetimepicker7').datetimepicker({
+                useCurrent: false //Important! See issue #1075
+            });
+            $("#datetimepicker6").on("dp.change", function (e) {
+                $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker7").on("dp.change", function (e) {
+                $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <table id="konti" style="width:100%">
+        <tr>
+
+            <th width="10%">Maksājuma Nr.</th>
+            <th width="20%">Maksātājs</th>
+            <th width="20%">Saņēmējs</th>
+            <th width="40%">Maksājuma mērķis</th>
+            <th width="10%">Summa</th>
+
+        </tr>
+        @foreach (var payment in Model)
+        {
+    <tr>
+
+        <td>@payment.Id</td>
+        <td>@payment.Konta1Id</td>
+        <td>@payment.Konta2Id</td>
+        <td>@payment.Resaon</td>
+        <td>@payment.AccountMoney</td>
+
+    </tr>
+        }
+    </table>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

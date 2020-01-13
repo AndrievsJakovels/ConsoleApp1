@@ -1,0 +1,20 @@
+﻿
+p {
+    font-size: 16px; 
+    color: red; 
+    font-weight: bold; 
+    background: black;
+}
+
+div {
+
+}
+
+    div.block2 {
+        background: green;
+        margin: 10px; /* atstarpe ārpus elementa*/
+        padding: 5px; /* atstarpe iekšpus elementa*/
+        border: 2px solid black;
+        border: 2px solid #4cff00;
+        border: 2px solid rgb(9,123,3); /* rgb(255,255,255)*/
+    }

@@ -1,0 +1,34 @@
+﻿@model List<MoviesApp4.Models.CinemaModel>
+@{
+    ViewBag.Title = "Cinema list";
+}
+
+<h2>Cinema list</h2>
+
+
+@Html.ActionLink("Pievienot jaunu", "Edit", "Cinema", null, new { @class = "btn btn-primary" })
+@Html.ActionLink("Pilns filmu saraksts", "Index", "Movie", null, new { @class = "btn btn-primary" })
+<table class="table table-striped">
+    <tr>
+
+        <th>Nosaukums</th>
+        <th>Adrese </th>
+
+
+        <th></th>
+
+    </tr>
+    @foreach (var cinema in Model)
+    {
+        <tr>
+            <th>@Html.ActionLink(cinema.Name, "Edit", "Cinema", new { id = cinema.Id }, null) </th>
+            <th>
+                @cinema.Adress
+
+
+            @Html.ActionLink("Dzēst", "Delete", "Cinema", new { id = cinema.Id }, new { @class = "btn btn-primary" })
+        </th>
+
+    </tr>
+}
+</table>

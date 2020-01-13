@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- lapas nosaukums, komentars paradas-->
+    <meta charset="utf-8" />
+    <title> Mācību interneta banka </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="StyleSheet1.css" />
+    <script src="script.js"></script>
+
+
+</head>
+<body>
+
+    <nav class=" navbar fixed-top navbar " style="background-color: #424242;   margin-bottom: 0px">
+        <div class="row">
+            <div class="col-md-9"></div>
+            <h7 class="text-my-own-color"> Vārds Uzvārds </h7>
+
+            <a href="#" class="text-my-own-color" style="display: inline; padding: 8px 8px;"> Iziet  </a>
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+            </button>
+
+        </div>
+    </nav>
+
+    <div class="col-md-9"></div>
+    <div class="block2">
+        <nav class=" navbar default navbar" style="margin-bottom: 0px">
+            <div class="row">
+                <p style="color:white; font-weight:bold;  font-size:20px; padding-left: 1230px;"> Testa Interentbanka</p>
+            </div>
+        </nav>
+    </div>
+    <button class="butt" type="button" style="font-weight:bold; color:white;font-size:20px; border:none">Tests</button>
+
+
+    <nav class=" navbar default navbar" style="background-color: #686868;    margin-top: 10px">
+        <div class="col-md-2"> </div>
+        <div class="col-md-6">
+
+
+            <label for="drop" class="toggle">Menu</label>
+            <input type="checkbox" id="drop" />
+            <ul class="menu">
+                <li><a href="#">Sākumlapa</a></li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-1" class="toggle">Maksājumi</label>
+                    <a href="#">Maksājumi</a>
+                    <input type="checkbox" id="drop-1" />
+                    <ul>
+                        <li><a href="#">Jauns maksājums</a></li>
+                        <li><a href="#">Bankas Paraugi</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-2" class="toggle">Konti/Kartes</label>
+                    <a href="#">Konta pārskats </a>
+
+                </li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-1" class="toggle">Maksājumi</label>
+                    <a href="#">Noguldījumi</a>
+                    <input type="checkbox" id="drop-1" />
+                    <ul>
+                        <li><a href="#">Mani noguldījumi</a></li>
+                        <li><a href="#">Jauns noguldījums</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-1" class="toggle">Maksājumi</label>
+                    <a href="#">Kredīti</a>
+                    <input type="checkbox" id="drop-1" />
+                    <ul>
+                        <li><a href="#">Pieteikties kredītam</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <br>
+    <br>
+    <div class="col-md-2"> </div>
+    <div class="col-md-7">
+        <h2>Noguldījuma apstiprināšana</h2>
+
+
+
+
+        <div class="progressBarContainer">
+            <div class="progress" style="  height:30px ;border: none;">
+                <div class="progress-bar progress-bar-success" style="width: 20%; color: white; background: #1be135; padding-top: 5px">
+                    <p style=" font-size:15px"> 1 Datu ievade</p>
+                </div>
+                <div class="progress-bar progress-bar-success" style="width: 15%; color: white; padding-top: 5px; background: #1be135">
+                    <p style=" font-size:15px"> 2 Datu pārbaude</p>
+                </div>
+                <div class="progress-bar progress-bar-success" style="width: 18%; color: white; padding-top: 5px; background: #1be135">
+                    <p style=" font-size:15px"> 3 Apstiprināšana</p>
+                </div>
+
+
+
+            </div>
+        </div>
+        <br>
+
+
+
+
+        <div class="form-group">
+            <label for="exampleInputName" class="col-sm-3 control-label">Ievadiet kodu no kodu kartes </label>
+
+            <div class="col-sm-1">
+                <button type="button" class="btn btn-default " style="height: 36px; width: 36px; background: white;" disabled="disabled">Nr.</button>
+            </div>
+
+            <div class="col-md-2">
+                <input type="text" class=" form-control" id="exampleInputName">
+
+
+
+            </div>
+
+
+            <form class="form-horizontal">
+
+                <div class="col-sm-9"></div>
+                <div class="form-group">
+
+                    <button type="submit" class="btn btn-default">Apstiprināt</button>
+
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

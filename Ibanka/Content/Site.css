@@ -1,0 +1,186 @@
+﻿body {
+}
+
+div.block2 {
+    background-color: #0094ff;
+    margin-bottom: 0px;
+    padding-top: 40px;
+}
+
+
+.text-my-own-color {
+    color: #fff;
+    padding: 8px;
+    line-height: 40px;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+.butt {
+    background-color: #1be135;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    position: absolute;
+    left: 265px;
+    top: 50px;
+}
+
+div.block3 {
+    text-align: center
+}
+
+
+
+
+/* CSS Document */
+body {
+    line-height: 32px;
+}
+
+
+
+
+h1 {
+}
+
+
+p {
+}
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+}
+
+
+
+    /* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+    nav:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+    nav ul {
+        float: right;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+    }
+
+        /* Positioning the navigation items inline */
+        nav ul li {
+            margin: 0px;
+            display: inline-block;
+            float: left;
+            background-color: #686868;
+        }
+
+    /* Styling the links */
+    nav a {
+        display: block;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+
+    nav ul li ul li:hover {
+        background: #686868;
+    }
+
+    /* Background color change on Hover */
+    nav a:hover {
+        background-color: #686868;
+    }
+
+    /* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+    nav ul ul {
+        display: none;
+        position: absolute;
+        /* has to be the same number as the "line-height" of "nav a" */
+        top: 60px;
+    }
+
+    /* Display Dropdowns on Hover */
+    nav ul li:hover > ul {
+        display: inherit;
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        width: 170px;
+        float: none;
+        display: list-item;
+        position: relative;
+    }
+
+    /* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+    nav ul ul ul li {
+        position: relative;
+        top: -60px;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+        left: 170px;
+    }
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after {
+    content: ' ';
+}
+
+li > a:only-child:after {
+    content: '';
+}
+
+
+
+#konti {
+    border-collapse: collapse;
+}
+
+    #konti td, #konti th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+
+
+    #konti tr:hover {
+        background-color: #ddd;
+    }
+
+    #konti th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #f2f2f2;
+        color: Black;
+    }

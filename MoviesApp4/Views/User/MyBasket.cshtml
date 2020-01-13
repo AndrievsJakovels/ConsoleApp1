@@ -1,0 +1,31 @@
+﻿@model List<MoviesApp4.Models.MoviesSessionModel>
+@{
+    ViewBag.Title = "MyBasket";
+}
+
+<h2>MyBasket</h2>
+
+<table class="table table-striped">
+
+    <tr>
+        <th>Seanss</th>
+        <th>Cena</th>
+        </tr>
+    @foreach (var session in Model)
+    {
+<tr>
+    <td>@session.Time</td>
+    <td>@session.Price</td>
+
+</tr>
+
+    }
+
+<td>
+ @**   <tr>
+    @Model.Sum(n => n.Price)
+
+
+    
+    </tr> *@
+    </table>

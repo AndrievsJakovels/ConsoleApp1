@@ -1,0 +1,101 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Ibanka.Models.SessionModel
+
+@{
+    ViewBag.Title = "PaymentCheckOut";
+}
+
+
+<br>
+<br>
+<div class="col-md-2"> </div>
+<div class="col-md-7">
+    <h2>Maksājumi</h2>
+
+
+
+
+    <div class="progressBarContainer">
+        <div class="progress" style="  height:30px ;border: none;">
+            <div class="progress-bar progress-bar-success" style="width: 20%; color: white; background: #1be135; padding-top: 5px">
+                <p style=" font-size:15px"> 1 Datu ievade</p>
+            </div>
+            <div class="progress-bar progress-bar-success" style="width: 15%; color: white; padding-top: 5px; background: #1be135">
+                <p style=" font-size:15px"> 2 Datu pārbaude</p>
+            </div>
+            <div class="progress-bar progress-bar-success" style="width: 18%; color: white; padding-top: 5px; background: #1be135">
+                <p style=" font-size:15px"> 3 Apstiprināšana</p>
+            </div>
+
+
+
+        </div>
+    </div>
+    <br>
+
+
+
+    @using (Html.BeginForm("PaymentCheckOut", "Payment", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+<div class="form-group">
+    <label for="exampleInputName" class="col-sm-5 control-label">Ievadiet kodu no kodu kartes </label>
+
+    <div class="col-sm-1">
+        <button type="button" class="btn btn-default " style="height: 36px; width: 36px; background: white;" disabled="disabled">@Model.Kartesnr .</button>
+    </div>
+
+    <div class="col-md-2">
+        @Html.TextBoxFor(m => m.KeyName, new { @class = "form-control" })
+
+        @Html.ValidationSummary()
+
+    </div>
+
+
+    <form class="form-horizontal">
+
+        <div class="col-sm-9"></div>
+        <div class="form-group">
+
+            <button type="submit" class="btn btn-default">Apstiprināt</button>
+
+        </div>
+
+    </form>
+
+    <div class="col-sm-7"></div>
+    <div class="form-group">
+
+
+
+    </div>
+
+
+
+
+</div>
+        @Html.ValidationSummary()
+    }
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

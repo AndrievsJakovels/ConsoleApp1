@@ -1,0 +1,71 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Ibanka.Models.Accounts>
+@{
+
+
+    ViewBag.Title = "Index";
+}
+
+<br>
+<br>
+
+<div class="col-md-2"> </div>
+<div class="col-md-7">
+    <h2>Sākumlapa</h2>
+
+    <table id="konti" style="width:100%">
+        <tr>
+            <th width="65%">Norēķunu konti</th>
+            <th width="25%">Pieejamais atlikums</th>
+            <th width="10%">Valūta</th>
+
+        </tr>
+        @foreach (var account in Model)
+        {
+            <tr>
+
+                <td>@account.AccountName</td>
+                <td>@account.Money</td>
+                <td>EUR</td>
+            </tr>
+        }
+    </table>
+
+
+
+
+    <h2>Noguldījumi</h2>
+    <h4>(Vieta izaugsmei)</h4>
+
+    <table id="konti" style="width:100%">
+        <tr>
+
+
+            <th width="40%">Noguldījumu</th>
+            <th width="13%">Termiņš</th>
+            <th width="11%">Procenti</th>
+            <th width="13%">Uzkrāts</th>
+            <th width="13%">Summa</th>
+            <th width="10%">Valūta</th>
+
+        </tr>
+
+        <tr>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+</div>
+

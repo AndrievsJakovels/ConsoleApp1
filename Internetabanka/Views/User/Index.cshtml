@@ -1,0 +1,23 @@
+﻿@model List<Internetabanka.Models.User>
+@{
+    ViewBag.Title = "Login in";
+}
+
+<h2>Index</h2>
+
+<table class="table table-striped">
+
+    <tr>
+        <th>Vārds</th>
+        <th>Parole</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+<tr>
+    <td>@user.Name</td>
+    <td>@user.Password</td>
+</tr>
+
+    }
+
+</table>

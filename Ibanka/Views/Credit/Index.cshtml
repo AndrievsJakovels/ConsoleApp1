@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br>
+<br>
+
+<div class="col-md-2"> </div>
+<div class="col-md-7">
+    <h2>Kredīta pieteikums</h2>
+
+    <form class="form-horizontal">
+
+
+        <div class="form-group">
+            <label for="inputPassword4" class="col-sm-5 control-label">Kredīta veids</label>
+            <div class="col-sm-5">
+                <div class="col-sm-13">
+                    <select class="form-control" id="inputPassword4">
+                        <option>Mājokļa kredīts</option>
+                        <option>Patēriņa kredīts</option>
+                        <option>Kredīts ar nekustamā īpašuma ķīlu</option>
+
+
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputName" class="col-sm-5 control-label">Vēlamā summa</label>
+
+            <div class="col-sm-2">
+                <input class="form-control" id="inputName">
+
+            </div>
+            <div class="col-sm-3">
+                <select class="form-control" id="inputPassword4">
+                    <option>EUR - eiro</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputName" class="col-sm-5 control-label">Ilgums(mēnešos)</label>
+            <div class="col-sm-2">
+                <input type="email" class="form-control" id="inputName">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="inputName" class="col-sm-5 control-label">Komentārs</label>
+            <div class="col-sm-5">  </div>
+            <div class="col-sm-5">
+                <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="col-sm-9"></div>
+        <div class="form-group">
+
+            <button type="submit" class="btn btn-default">Pieprasīt</button>
+
+        </div>
+    </form>
+
+
+
+
+
+
+
+</div>

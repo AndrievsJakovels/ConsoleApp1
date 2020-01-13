@@ -1,0 +1,42 @@
+﻿@model MoviesApp4.Models.FilmuModelis
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="col-md-3">
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            Cienamas
+        </a>
+        @foreach (var kino in Model.Cinemas)
+        {
+
+            <a href="@Url.Action("index", new { id = kino.Id})" class="list-group-item">@kino.Name  <span class="badge">@kino.MovieCount</span></a>
+
+
+
+        }
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-8 col-md-9">
+            @foreach (var filmas in Model.Movies)
+            {
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3>@filmas.Name</h3>
+                            <p>@filmas.Year</p>
+                            <p><a href="@Url.Action("Movie", new { id = filmas.Id})" class="btn btn-primary" role="button">Button</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>

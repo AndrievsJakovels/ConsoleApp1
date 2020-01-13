@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title> Mācību interneta banka </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css"> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js"></script>
+
+    <link rel="stylesheet" href="StyleSheet1.css" />
+    <script src="script.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+
+    <nav class=" navbar fixed-top navbar " style="background-color: #424242;   margin-bottom: 0px">
+        <div class="row">
+            <div class="col-md-9"></div>
+            <h7 class="text-my-own-color"> Vārds Uzvārds </h7>
+
+            <a href="#" class="text-my-own-color" style="display: inline; padding: 8px 8px;"> Iziet  </a>
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+            </button>
+
+        </div>
+    </nav>
+
+
+    <div class="col-md-9"></div>
+    <div class="block2">
+        <nav class=" navbar default navbar" style="margin-bottom: 0px">
+            <div class="row">
+                <p style="color:white; font-weight:bold;  font-size:20px; padding-left: 1230px;"> Testa Interentbanka</p>
+            </div>
+        </nav>
+    </div>
+    <button class="butt" type="button" style="font-weight:bold; color:white;font-size:20px; border:none">Tests</button>
+
+
+    <nav class=" navbar default navbar" style="background-color: #686868;    margin-top: 10px">
+        <div class="col-md-2"> </div>
+        <div class="col-md-6">
+
+
+            <label for="drop" class="toggle">Menu</label>
+            <input type="checkbox" id="drop" />
+            <ul class="menu">
+                <li><a href="#">Sākumlapa</a></li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-1" class="toggle">Maksājumi</label>
+                    <a href="#">Maksājumi</a>
+                    <input type="checkbox" id="drop-1" />
+                    <ul>
+                        <li><a href="#">Jauns maksājums</a></li>
+                        <li><a href="#">Bankas Paraugi</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-2" class="toggle">Konti/Kartes</label>
+                    <a href="#">Konta pārskats </a>
+
+                </li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-1" class="toggle">Maksājumi</label>
+                    <a href="#">Noguldījumi</a>
+                    <input type="checkbox" id="drop-1" />
+                    <ul>
+                        <li><a href="#">Mani noguldījumi</a></li>
+                        <li><a href="#">Jauns noguldījums</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-1" class="toggle">Maksājumi</label>
+                    <a href="#">Kredīti</a>
+                    <input type="checkbox" id="drop-1" />
+                    <ul>
+                        <li><a href="#">Pieteikties kredītam</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <br>
+    <br>
+
+    <div class="col-md-2"> </div>
+    <div class="col-md-7">
+        <h2> Konta pārskats</h2>
+
+        <br>
+
+        <h4>Izvēlaties pārskata periodu un kontu</h4>
+
+        <div class="container4">
+            <div class='col-md-4'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker6'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-4'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker7'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+
+                <div class="col-sm-4">
+
+                    <select class="form-control" id="inputPassword4">
+                        <option>Konts</option>
+
+                    </select>
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <br>
+        <br>
+        <form class="form-horizontal">
+
+            <div class="col-sm-11"></div>
+
+            <div class="form-group">
+
+                <button type="button" class="btn btn-primary">Pieprasīt</button>
+
+            </div>
+
+        </form>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputName" class="col-sm-3 control-label">Pieejamais atlikums</label>
+                <div class="col-sm-5">
+                    <label for="inputName" class="col-sm-6 control-label style = " text-aligh: left"">Pieejamais atlikums</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="col-sm-3 control-label">Sākuma atlikums</label>
+                <div class="col-sm-5">
+                    <label for="inputName" class="col-sm-6 control-label; style = " text-aligh: left">Sākuma atlikums</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputName" class="col-sm-3 control-label">Beigu atlikums</label>
+                <div class="col-sm-5">
+                    <label for="inputName" class="col-sm-6 control-label; style = " text-aligh: left">Beigu atlikums</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputName" class="col-sm-3 control-label">Debeta apgrozījums</label>
+                <div class="col-sm-5">
+                    <label for="inputName" class="col-sm-6 control-label; style = " text-aligh: left">Debeta apgrozījums</label>
+                </div>
+            </div>
+
+
+        </form>
+
+
+
+
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker6').datetimepicker();
+                $('#datetimepicker7').datetimepicker({
+                    useCurrent: false //Important! See issue #1075
+                });
+                $("#datetimepicker6").on("dp.change", function (e) {
+                    $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+                });
+                $("#datetimepicker7").on("dp.change", function (e) {
+                    $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+                });
+            });
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+        <table id="konti" style="width:100%">
+            <tr>
+                <th width="10%">Datums</th>
+                <th width="20%">Maksātājs</th>
+                <th width="20%">Saņēmējs</th>
+                <th width="40%">Maksājuma mērķis</th>
+                <th width="10%">Summa</th>
+            </tr>
+            <tr>
+
+                <td>5-07-2019</td>
+                <td>Andrievs</td>
+                <td>Pēteris</td>
+                <td>Konta papildināšana</td>
+                <td>500</td>
+
+            </tr>
+
+        </table>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

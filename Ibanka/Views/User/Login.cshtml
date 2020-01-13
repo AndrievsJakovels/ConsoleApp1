@@ -1,0 +1,132 @@
+﻿@model Ibanka.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- lapas nosaukums, komentars paradas-->
+    <meta charset="utf-8" />
+    <title> Mācību interneta banka </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="~/Content/Site.css" />
+
+
+
+</head>
+<body>
+
+    <nav class=" navbar fixed-top navbar " style="background-color: #424242;   margin-bottom: 0px">
+        <div class="row">
+            <div class="col-md-9"></div>
+            <a href="#" class="text-my-own-color" style="display: inline; padding: 8px 8px;"> Latviešu    </a>
+            |
+            <a href="#" class="text-my-own-color" style="display: inline; padding: 8px 8px;"> English  </a>
+            |
+            <a href="#" class="text-my-own-color" style="display: inline; padding: 8px 8px;"> Русский  </a>
+        </div>
+
+    </nav>
+
+    <div class="block2 ">
+        <nav class=" navbar default navbar">
+            <p style="color:white; font-weight:bold;  font-size:20px; padding-left:1230px"> Testa Interentbanka</p>
+        </nav>
+    </div>
+    <button class="butt" type="button" style="font-weight:bold; color:white;font-size:20px; border:none">Tests</button>
+    <br>
+    <h2 style="font-weight:bold; padding-left: 265px; "> Pieslēgties</h2>
+
+    <div class="col-md-2"></div>
+
+
+
+    <div class="progressBarContainer" style="width:1100px; height:220px;  margin-bottom: 0px;">
+
+        <div class="progress" style="  height:30px ;border: none;">
+
+            <div class="progress-bar progress-bar-success" style="width: 18%; color: white; background: #1be135; padding-top: 5px">
+                <p style=" font-size:15px"> 1 Lietotaja kods </p>
+            </div>
+
+
+            <div class="progress-bar progress-bar-success" style="width: 10%; color: black; padding-top: 5px; background: none">
+                <p style=" font-size:15px"> 2 Parole</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="w3-container" style="background-color:#f2f2f2;width:840px; height:150px;  position: absolute;   left: 265px;  top: 300px;">
+
+        <div class="col-sm-5">
+            @using (Html.BeginForm("Login", "User", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+
+                <div class="form-group" style="padding-left: 15px; padding-top: 12px;">
+                    <label for="exampleInputName">Lūdzu ievadiet lietotāja ID</label>
+
+                    @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+                </div>
+
+
+
+                <div class="form-group">
+              
+                    <input type="submit" style=" margin-bottom: 8px; margin-left: 15px; border-color: deepskyblue; color: deepskyblue;  " value="Pieslēgties" class="btn btn-default" />
+
+                </div>
+
+                @Html.ValidationSummary()
+            }
+
+        </div>
+    </div>
+
+  
+
+
+
+
+
+
+
+
+        <button type="button" class="btn btn-default" style="height: 120px;width: 120px;font-size: 90px; color:white; position: absolute;   left: 950px;  top: 310px; background:none; border: none" disabled="disabled">
+            <span class="glyphicon glyphicon-lock"></span>
+        </button>
+
+
+        <div class="w3-container" style="background-color:#f2f2f2; width:250px; height:450px;  position: absolute;   left: 1150px;  top: 240px;">
+
+            <h4 style="margin-left:10px; font-weight:bold">Svarīgi</h4>
+            <div class="w3-container" style="background-color:#e4830d; width:200px; height:390px; margin-left:25px">
+                <h5 style="text-align:center; font-weight:bold; padding-top:5px">Noderīga informācija</h5>
+
+                <br>
+
+                <h5 style="text-align:center;  padding-top:5px">Dažāda noderīga informācija par bankas darbību</h5>
+
+            </div>
+        </div>
+
+
+
+</body>
+</html>
